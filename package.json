@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "vitest": "vitest",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/lth-1026/miniTS-compiler/issues"
   },
-  "homepage": "https://github.com/lth-1026/miniTS-compiler#readme"
+  "homepage": "https://github.com/lth-1026/miniTS-compiler#readme",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  }
 }
