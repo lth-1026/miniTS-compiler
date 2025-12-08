@@ -5,6 +5,7 @@ export enum TokenType {
   If,
   Else,
   While,
+  For,
   Return,
   True,
   False,
