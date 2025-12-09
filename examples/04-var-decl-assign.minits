@@ -1,0 +1,18 @@
+// [04] Variable declaration & assignment
+// - 타입 명시/생략, 선언 후 대입, 동일 타입 유지 확인
+
+let a: number = 1;
+let b = 2;                 // 타입 추론: number
+let c: number;             // 선언만
+c = a + b;                 // 3
+
+let flag: boolean = true;
+flag = false;
+
+let msg: string = "hello";
+msg = "world";
+
+// 여러 선언과 대입 조합
+let total = c + 7;         // 10
+let switched: number = total;
+switched = switched - 1;   // 9

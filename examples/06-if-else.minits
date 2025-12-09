@@ -1,0 +1,26 @@
+// [06] if / if-else test
+
+let score: number = 85;
+let grade: string = "F";
+
+if (score >= 90) {
+  grade = "A";
+} else if (score >= 80) {
+  grade = "B";
+} else if (score >= 70) {
+  grade = "C";
+} else {
+  grade = "D";
+}
+
+// 단순 if (else 없음)
+let passed: boolean = false;
+if (score >= 60) {
+  passed = true;
+}
+
+// 조건식이 boolean인지 확인 (타입체커에 의해 보장)
+let bonus: number = 5;
+if (passed && grade == "B") {
+  score = score + bonus;
+}

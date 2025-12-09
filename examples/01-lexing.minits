@@ -1,0 +1,36 @@
+// [01] Lexing coverage
+// - 키워드, 타입 키워드, 식별자, 리터럴, 연산자, 구분자, 주석을 모두 토큰화
+// - 실행 의미보다는 토큰 종류 커버가 목적
+
+let alpha: number = 42;
+let beta: boolean = false;
+let gamma: string = "lexing";
+let delta = 3.14; // 타입 추론용 숫자
+let escaped: string = "escape: \\n \\t \\\"quote\\\"";
+
+function inc(v: number): number {
+  return v + 1;
+}
+
+// 조건/논리/산술/비교/괄호 토큰
+if (alpha >= 40 && !beta) {
+  alpha = (alpha + 1) * 2 - 5 / 5;
+} else {
+  alpha = alpha - 1;
+}
+
+// while/for 토큰
+while (alpha < 50) {
+  alpha = inc(alpha);
+}
+
+/*
+  여러 줄 주석 테스트
+  여기 내용도 무시되어야 합니다.
+*/
+
+for (let i: number = 0; i < 3; i = i + 1) {
+  gamma = gamma + "!";
+}
+
+// 한 줄 주석 테스트

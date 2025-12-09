@@ -1,0 +1,22 @@
+// [08] for loop test
+// - 기본 for, init 생략, step 생략을 통한 디소거 확인
+
+function sumTo(n: number): number {
+  let acc: number = 0;
+
+  // full header
+  for (let i: number = 0; i < n; i = i + 1) {
+    acc = acc + i;
+  }
+
+  // init 생략, step 생략
+  let j: number = 0;
+  for (; j < 3; ) {
+    acc = acc + j;
+    j = j + 1; // 수동 step
+  }
+
+  return acc;
+}
+
+let result: number = sumTo(5);

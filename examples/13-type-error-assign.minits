@@ -1,0 +1,4 @@
+// [E3] Type error: assigning string to number
+
+let x: number = 1;
+x = "hello";   // 타입 에러

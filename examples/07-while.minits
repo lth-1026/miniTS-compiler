@@ -1,0 +1,18 @@
+// [07] while loop test
+// - 1부터 5까지의 합을 while로 계산하고, 중첩 블록에서 boolean 체크
+
+let i: number = 1;
+let sum: number = 0;
+
+while (i <= 5) {
+  sum = sum + i;
+  i = i + 1;
+
+  if (sum > 6) {
+    // 블록 스코프 테스트
+    let over: boolean = true;
+    if (over) {
+      sum = sum + 0; // noop
+    }
+  }
+}

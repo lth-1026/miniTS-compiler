@@ -1,0 +1,7 @@
+// [E4] Type error: wrong argument type in function call
+
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+let x: number = add(1, "2");  // 두 번째 인자 타입 에러

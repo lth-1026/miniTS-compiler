@@ -1,0 +1,21 @@
+// [15] No implicit casts (type errors expected)
+// - 서로 다른 타입을 암묵 변환 없이 섞으면 TypeChecker가 오류를 내야 함
+
+let num: number = 1;
+let str: string = "2";
+let boolVal: boolean = true;
+
+// 잘못된 이항 연산
+let badAdd = num + str;       // number + string → 오류
+let badSub = str - num;       // string - number → 오류
+let badLogic = num && boolVal; // number && boolean → 오류
+
+// 잘못된 비교
+let badCompare = boolVal < num; // boolean < number → 오류
+
+// 잘못된 함수 호출 인자
+function takesNumber(x: number): number {
+  return x + 1;
+}
+
+let wrongCall = takesNumber("3"); // string 전달 → 오류

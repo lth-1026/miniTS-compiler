@@ -1,0 +1,35 @@
+// [05] Arithmetic / Comparison / Logical operators
+// - 산술: +, -, *, /
+// - 비교: <, <=, >, >=, ==, ===
+// - 논리: &&, ||, !
+
+let x: number = 10;
+let y: number = 3;
+
+let add: number = x + y;
+let sub: number = x - y;
+let mul: number = x * y;
+let div: number = x / y;
+
+let lt: boolean = x < y;
+let le: boolean = x <= y;
+let gt: boolean = x > y;
+let ge: boolean = x >= y;
+
+let eq: boolean = x == y;
+let seq: boolean = x === y;
+
+let b1: boolean = true;
+let b2: boolean = false;
+
+let andResult: boolean = b1 && b2;
+let orResult: boolean = b1 || b2;
+let notResult: boolean = !b2;
+
+// 문자열 + 문자열 concat 허용 테스트 (MiniTS 설계 상 허용)
+let s1: string = "hello";
+let s2: string = " world";
+let s3: string = s1 + s2;
+
+// 섞인 비교 + 논리 조합
+let complex: boolean = (add > mul) || (div == 3) && !(lt);

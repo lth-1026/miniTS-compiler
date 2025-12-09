@@ -1,0 +1,5 @@
+// [E2] Parse error test
+// - 세미콜론/표현식 누락 등으로 구문 오류를 발생시키는 예제
+
+let x: number = 1
+let y: number = ;

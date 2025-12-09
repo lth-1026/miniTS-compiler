@@ -1,0 +1,33 @@
+// [02] Parsing + AST combined
+// - 괄호/연산자 우선순위, if/while/for 블록, 함수 선언/호출까지 한 파일에 담음
+
+let a: number = 1 + 2 * 3;          // 7
+let b: number = (1 + 2) * 3;        // 9
+let c: number = 10 - 3 - 2;         // (10 - 3) - 2 = 5
+let d: number = 10 / 2 * 3;         // (10 / 2) * 3 = 15
+let e: boolean = 1 + 2 * 3 < 10 && 4 == 4 || false;
+let f: boolean = !(a < b) || (a === b);
+
+function combineAndWalk(): number {
+  let counter: number = 0;
+
+  if (a < b && e) {
+    counter = counter + 1;
+  } else {
+    counter = counter - 1;
+  }
+
+  while (counter < 3) {
+    counter = counter + 2;
+  }
+
+  for (let i: number = 0; i < 2; i = i + 1) {
+    counter = counter + i;
+  }
+
+  // ((a + b) / (c - 2)) == ((7 + 9) / 3) == 16 / 3
+  let folded: number = (a + b) / (c - 2);
+  return folded + counter + d; // 결과: 16/3 + counter + 15
+}
+
+let result: number = combineAndWalk();

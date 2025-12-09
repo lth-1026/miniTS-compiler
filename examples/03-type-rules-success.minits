@@ -1,0 +1,29 @@
+// [03] Type rule walkthrough (success cases)
+// - 타입 규칙 요약을 모두 한 번씩 통과시키는 예제 (자동 변환 없음)
+
+// 숫자 전용 연산
+let n1: number = 4 + 5;
+let n2: number = n1 - 3;
+let n3: number = n2 * 2;
+let n4: number = n3 / 3;
+
+// 문자열 + 문자열
+let s1: string = "mini";
+let s2: string = "ts";
+let s3: string = s1 + s2;
+
+// 비교/논리 (boolean 전용)
+let cmp: boolean = n1 > n2;
+let logic: boolean = (cmp && true) || !false;
+
+// 함수 호출 + 반환 타입 확인
+function andAll(a: boolean, b: boolean): boolean {
+  return a && b;
+}
+
+function echoStr(name: string): string {
+  return "Hello " + name;
+}
+
+let ok: boolean = andAll(cmp, logic);
+let greet: string = echoStr(s3);

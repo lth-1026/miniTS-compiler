@@ -1,0 +1,49 @@
+// [10] Full integration test
+// - 변수, 산술, 비교, 논리, if/else, while, for, 함수 모두 사용
+
+function sumTo(n: number): number {
+  let acc: number = 0;
+
+  for (let i: number = 0; i < n; i = i + 1) {
+    acc = acc + i;
+  }
+
+  return acc;
+}
+
+function factorial(n: number): number {
+  let result: number = 1;
+  let i: number = 1;
+
+  while (i <= n) {
+    result = result * i;
+    i = i + 1;
+  }
+
+  return result;
+}
+
+let limit: number = 5;
+let totalSum: number = sumTo(limit);       // 0 + 1 + 2 + 3 + 4 = 10
+let fact: number = factorial(5);          // 120
+
+let ok: boolean = (totalSum < fact) && (fact === 120);
+
+let status: string = "unknown";
+if (ok) {
+  status = "OK";
+} else {
+  status = "NG";
+}
+
+// for 디소거 확인 + 문자열 concat
+let tags: string = "";
+for (let t: number = 0; t < 3; t = t + 1) {
+  tags = tags + "#";
+}
+
+// while + 대입 표현식
+let counter: number = 0;
+while (counter < 3) {
+  counter = counter + 1;
+}

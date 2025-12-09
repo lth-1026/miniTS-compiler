@@ -1,0 +1,27 @@
+// [09] function declaration & call
+// - 여러 개의 함수
+// - 서로 다른 리턴 타입
+// - 인자 타입 검사
+
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+function isPositive(x: number): boolean {
+  return x > 0;
+}
+
+function greet(name: string): string {
+  return "Hello, " + name;
+}
+
+let s: number = add(3, 4);
+let ok: boolean = isPositive(s);
+let message: string = greet("MiniTS");
+
+// 함수 반환값을 다시 호출 인자로 사용
+function doubleAdd(x: number): number {
+  return add(x, add(1, 2));
+}
+
+let d: number = doubleAdd(5);
